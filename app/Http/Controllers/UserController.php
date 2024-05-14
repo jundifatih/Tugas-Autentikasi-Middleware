@@ -46,7 +46,7 @@ class UserController extends Controller
         ]);
 
         // assign role
-        $user->assignRole('superadmin');
+        $user->assignRole('user');
 
         if ($user) {
             return redirect()->route('register')
