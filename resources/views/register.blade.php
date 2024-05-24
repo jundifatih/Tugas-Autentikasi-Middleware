@@ -51,6 +51,15 @@
                 @enderror
             </div>
 
+            <div class="mb-3">
+                <label for="role" class="form-label">Role</label>
+                <select class="form-select @error('role') is-invalid @enderror" id="role" name="role" required>
+                    <option selected disabled>Select Role</option>
+                    <option value="superadmin">SuperAdmin</option>
+                    <option value="user">User</option>
+                </select>
+            </div>
+            
             <div class="form-group mb-3">
                 <label for="gender">Jenis Kelamin</label>
                 <select name="gender" class="form-select" required>

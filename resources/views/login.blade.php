@@ -4,7 +4,7 @@
 @section('content')
 <div class="row justify-content-center mt-5">
     <div class="col-md-4 border p-4 rounded">
-        <h1 class="h3 mb-3 fw-normal text-center">Halaman Register User</h1>
+        <h1 class="h3 mb-3 fw-normal text-center">Halaman Login User</h1>
 
         <!-- error message -->
         @if (session('error'))

@@ -46,7 +46,8 @@ class UserController extends Controller
         ]);
 
         // assign role
-        $user->assignRole('user');
+        // $user->assignRole('user');
+        $user->assignRole($request->role);
 
         if ($user) {
             return redirect()->route('register')
@@ -77,7 +78,9 @@ class UserController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $request->session()->regenerate();
-            return redirect()->route('dashboard');
+            // return redirect()->route('dashboard');
+            return redirect()->route('products.index');
+            // return redirect()->route('login')->with('success', 'Login success');
         } else {
             return redirect()->route('login')
                 ->with('error', 'Login failed email or password is incorrect');
